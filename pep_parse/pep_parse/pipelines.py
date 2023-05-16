@@ -26,6 +26,5 @@ class PepParsePipeline:
         with open(filepath, mode='w', encoding='utf-8') as csvfile:
             status_wtiter = csv.writer(csvfile, dialect=csv.unix_dialect)
             status_wtiter.writerow(HEADERS_PEP_TABLE)
-            for type_status in self.status_count.items():
-                status_wtiter.writerow(type_status)
+            status_wtiter.writerows(self.status_count.items())
             status_wtiter.writerow(total_status)

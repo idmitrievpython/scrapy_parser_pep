@@ -2,7 +2,6 @@ import re
 import scrapy
 
 from pep_parse.items import PepParseItem
-
 from pep_parse.constants import DOMAIN, PATTERN, START_URL
 
 
